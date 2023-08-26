@@ -1,69 +1,94 @@
-## Animated Paper Plane Button - JavaScript
+# Animated Paper Plane Button
 
-This JavaScript code is responsible for animating the paper plane button when it's clicked. It uses the GreenSock Animation Platform (GSAP) to create dynamic animations and transitions. Below is an explanation of how the JavaScript code works:
+Create an engaging and interactive animated paper plane button with this HTML, CSS, and JavaScript code. When clicked, this button transforms into a paper plane and sends with a success message, adding a delightful touch to your web application.
 
-### Event Listener
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
+- [License](#license)
+- [Preview](#preview)
 
-```javascript
-document.querySelectorAll(".button").forEach((button) => {
-    // ...
-    button.addEventListener("click", (e) => {
-        // ...
-    });
-});
-```
+## Features
 
-The code begins by selecting all elements with the class "button" and adding a click event listener to each of them.
+- Engaging and interactive paper plane animation on button click.
+- Success message upon successful completion of the animation.
+- Customizable button styles and animation parameters.
 
-### Animation Keyframes
+## Installation
 
-The button's animation is defined using a series of keyframes. Each keyframe specifies how the button's CSS custom properties (variables) should change over time. Here are the keyframes:
+To use this animated paper plane button in your project, follow these steps:
 
-1. **Initial Animation**
-    - The button's wings move, and its body changes shape.
-    - Duration: 0.2 seconds
+1. **Clone the Repository**:
 
-2. **Wing Adjustment**
-    - Fine-tunes the position of the wings and body.
-    - Duration: 0.2 seconds
+   Clone this repository to your local machine using Git:
 
-3. **Rotation**
-    - Rotates the paper plane.
-    - Duration: 0.25 seconds
+   ```shell
+   git clone https://github.com/your-username/animated-paper-plane-button.git
+   ```
 
-4. **Final Flight**
-    - Simulates the paper plane's flight path.
-    - Duration: 0.2 seconds
+2. **Include the Files**:
 
-5. **Button Reset**
-    - Restores the button's original state.
-    - Duration: 0.375 seconds
+   - Copy the `style.css` file to your project's CSS directory.
+   - Copy the `script.js` file to your project's JavaScript directory.
+   - Include the GreenSock Animation Platform (GSAP) library by adding the following script tag to your HTML file:
 
-### CSS Property Changes
+     ```html
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     ```
 
-Within each keyframe, the code updates various CSS custom properties (variables) to achieve the desired animation effects. For example:
-- `--left-wing-first-x`, `--left-wing-first-y`: Adjust the position of the left wing.
-- `--rotate`: Rotate the paper plane.
-- `--plane-x`, `--plane-y`: Move the paper plane on the screen.
-- `--text-opacity`, `--border-radius`: Control the button's appearance.
+## Usage
 
-### Animation Sequence
+1. **HTML Structure**:
 
-The animations are sequenced using GSAP's `to` method. The `keyframes` array defines the sequence of keyframes to be played in order.
+   In your HTML file, create a button element with the class "button" and an anchor element for the Twitter link with the class "twitter":
 
-### Reset Animation
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <!-- Add meta tags and title here -->
+       <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+       <button class="button">
+           <!-- Button content goes here -->
+       </button>
+       <!-- Twitter link -->
+       <a class="twitter" target="_blank" href="https://twitter.com/your-twitter-handle">
+           <!-- Twitter icon goes here -->
+       </a>
+       <script src="script.js"></script>
+   </body>
+   </html>
+   ```
 
-After the final flight animation, there's a reset animation that brings the button back to its initial state. This animation includes fading the button in and removing any applied styles.
+2. **Customization**:
 
-### Success Animation
+   You can customize the button's appearance and animation parameters by modifying the CSS variables in the `style.css` file. Adjust colors, shapes, and animations to match your design preferences.
 
-There's also a success animation that changes the appearance of the button to indicate a successful action.
+3. **Demo Integration**:
 
-### Variable Usage
+   To integrate this animated paper plane button into your project, copy the button's HTML structure from the provided code and add it to your desired web page.
 
-The JavaScript code makes use of CSS custom properties (variables) to control the animation. These variables are defined in the CSS code and are manipulated in the JavaScript to create dynamic animations.
+4. **Include JavaScript**:
 
-This JavaScript code, in conjunction with the provided HTML and CSS, creates an engaging and visually appealing animated paper plane button.
+   Make sure to include the GreenSock Animation Platform (GSAP) library as shown in the installation steps. The `script.js` file contains the JavaScript code responsible for the button's animation.
+
+## Customization
+
+Customize the button's appearance and animation by modifying the CSS variables in the `style.css` file. Here are some key variables you can adjust:
+
+- `--primary`: Button's primary background color.
+- `--text`: Button's text color.
+- `--trails`: Color of the animated trails.
+- `--success`: Color of the success message.
+- Various animation parameters like duration and timing can be adjusted in the JavaScript code to change the animation's speed and behavior.
+
+## License
+
+This code is provided under the [MIT License](LICENSE). Feel free to use, modify, and distribute it in your projects. If you find it useful, a star to the repository would be appreciated!
 
 ## Preview
 <img width="895" alt="Screenshot 2023-08-26 181616" src="https://github.com/Aarzoo75/Animated-Paper-Plane-Button/assets/59678435/15f95078-7684-4b1a-b883-abc0c90b7ac9">
